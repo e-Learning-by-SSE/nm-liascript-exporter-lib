@@ -23,7 +23,7 @@ pipeline {
                     image 'node:18-bullseye'
                     reuseNode true
                     label 'docker'
-                    args '--tmpfs /.cache -u root -v /var/run/docker.sock:/var/run/docker.sock '
+                    args '--tmpfs /.cache -u root -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/.npm:/.npm'
                 }
             }
             stages {
