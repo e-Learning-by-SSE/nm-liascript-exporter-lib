@@ -43,12 +43,9 @@ pipeline {
                     }
                 }
 
-                stage('Docker Build') {
+                stage('Publish NPM Package') {
                     steps {
-                        configFileProvider([configFile(fileId: 'e-learning-by-sse', targetLocation: '.npmrc')]) {
-                            sh 'npm install'
-                            npmPublish("${NPMRC}")
-                        }
+                        npmPublish("${NPMRC}")
                     }
                 }
             }
