@@ -23,7 +23,7 @@ pipeline {
                     image 'node:18-bullseye'
                     reuseNode true
                     label 'docker'
-                    args '--tmpfs /.cache -u root -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/.npm:/.npm'
+                    args '--tmpfs /.cache -u root -v /var/run/docker.sock:/var/run/docker.sock'
                 }
             }
             stages {
@@ -45,8 +45,10 @@ pipeline {
 
                 stage('Docker Build') {
                     steps {
-                        sh 'npm install'
-                        npmPublish("${NPMRC}")
+                        configFileProvider([configFile(fileId: 'e-learning-by-sse', targetLocation: '.npm')]) {
+                            sh 'npm install'
+                            npmPublish("${NPMRC}")
+                        }
                     }
                 }
             }
