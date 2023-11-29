@@ -45,7 +45,7 @@ pipeline {
 
                 stage('Docker Build') {
                     steps {
-                        configFileProvider([configFile(fileId: 'e-learning-by-sse', targetLocation: '.npm')]) {
+                        configFileProvider([configFile(fileId: 'e-learning-by-sse', targetLocation: '.npmrc')]) {
                             sh 'npm install'
                             npmPublish("${NPMRC}")
                         }
