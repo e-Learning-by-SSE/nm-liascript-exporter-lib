@@ -6,11 +6,6 @@
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "includeNodeModules": true,
-  "files": [
-    "dist",
-    "README.md",
-    "LICENSE"
-  ],
   "dependencies": {
     "@liascript/markdownify": "^0.1.0",
     "parcel": "^2.9.3"
