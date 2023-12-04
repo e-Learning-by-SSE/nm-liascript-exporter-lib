@@ -39,7 +39,7 @@ pipeline {
 
                 stage('Build') {
                     steps {
-                        sh 'npx tsc'
+                        sh 'npx parcel build'
                     }
                 }
 
