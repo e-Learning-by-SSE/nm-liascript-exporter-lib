@@ -1,2 +1,5 @@
-// the default is needed as the function is the default export and needs to be named differently to be reexported in the index.ts
-export { default as libLiaScrImp } from "./LibLiaScr";
+import liascriptify from "../node_modules/@liascript/markdownify/dist/lib";
+
+export default function libLiaScr(json: any) {
+  return liascriptify(json) as Promise<string>;
+}
