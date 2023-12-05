@@ -1,11 +1,19 @@
 {
   "type": "module",
   "name": "@e-learning-by-sse/nm-liascript-exporter-lib",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "source": "src/index.ts",
-  "module": "dist/index.js",
+  "main": "lib/index.js",
   "types": "dist/index.d.ts",
-  "includeNodeModules": true,
+  "includeNodeModules": false,
+  "scripts": {
+    "build": "npx parcel build"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "dependencies": {
     "@liascript/markdownify": "^0.1.0",
     "parcel": "^2.9.3"
