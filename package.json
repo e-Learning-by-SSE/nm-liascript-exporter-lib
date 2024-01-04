@@ -15,7 +15,7 @@
     "LICENSE"
   ],
   "dependencies": {
-    "@liascript/markdownify": "^0.1.0",
+    "@liascript/markdownify": "^0.1.7",
     "parcel": "^2.9.3"
   },
   "devDependencies": {
