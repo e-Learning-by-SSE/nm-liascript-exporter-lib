@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "@e-learning-by-sse/nm-liascript-exporter-lib",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,7 +15,7 @@
     "LICENSE"
   ],
   "dependencies": {
-    "@liascript/markdownify": "^0.1.7",
+    "@liascript/markdownify": "^0.1.0",
     "parcel": "^2.9.3"
   },
   "devDependencies": {
